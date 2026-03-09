@@ -50,10 +50,10 @@ const Testimonials = () => {
     <div className="pt-20">
       <section className="py-24 bg-cream">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-deep-rose font-medium tracking-widest uppercase text-sm mb-3">What People Say</p>
-          <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">Testimonials</h1>
-          <div className="section-divider mb-4" />
-          <p className="text-muted-foreground max-w-2xl mx-auto">Hear from the families and couples whose celebrations we brought to life</p>
+          <p className="text-deep-rose font-medium tracking-[0.2em] uppercase text-xs mb-4">What People Say</p>
+          <h1 className="font-heading text-4xl md:text-5xl font-semibold mb-5 tracking-tight">Testimonials</h1>
+          <div className="section-divider mb-5" />
+          <p className="text-muted-foreground max-w-2xl mx-auto text-[15px] leading-relaxed">Hear from the families and couples whose celebrations we brought to life</p>
         </div>
       </section>
 

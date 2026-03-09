@@ -39,11 +39,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-border shadow-soft">
       <div className="container mx-auto px-4 flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2.5">
           <img src={logo} alt="Utsaav" className="h-10 md:h-12" />
-          <span className="font-heading text-lg md:text-xl font-bold text-foreground">
+          <span className="font-heading text-lg md:text-xl font-semibold text-foreground tracking-tight">
             <span className="text-deep-rose">Utsaav</span>
           </span>
         </Link>
@@ -62,13 +62,13 @@ const Navbar = () => {
                   {l.name} <ChevronDown className={`w-3.5 h-3.5 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
                 </button>
                 {servicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-56 bg-background border border-border rounded-xl shadow-romantic py-2 animate-fade-in">
+                  <div className="absolute top-full left-0 mt-3 w-56 bg-white border border-border rounded-2xl shadow-romantic py-2 animate-fade-in">
                     {serviceLinks.map((s) => (
                       <Link
                         key={s.path}
                         to={s.path}
                         onClick={() => setServicesOpen(false)}
-                        className="block px-4 py-2.5 text-sm hover:bg-primary/10 hover:text-deep-rose transition-colors"
+                        className="block px-5 py-3 text-sm hover:bg-blush hover:text-deep-rose transition-colors"
                       >
                         {s.name}
                       </Link>
@@ -90,7 +90,7 @@ const Navbar = () => {
           )}
           <Link
             to="/contact"
-            className="px-5 py-2 rounded-full bg-deep-rose text-card text-sm font-medium hover:opacity-90 transition-opacity"
+            className="px-6 py-2.5 rounded-full bg-deep-rose text-card text-sm font-medium hover:bg-deep-rose/90 transition-all shadow-md hover:shadow-lg"
           >
             Book Now
           </Link>
@@ -104,7 +104,7 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-background border-t border-border animate-fade-in">
+        <div className="md:hidden bg-white border-t border-border animate-fade-in shadow-lg">
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
             {navLinks.map((l) =>
               l.dropdown ? (
